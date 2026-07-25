@@ -53,11 +53,12 @@ const Navbar = () => {
                             <Link to="/" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <Home size={18} /> Home
                             </Link>
-                            <Link to="/gallery" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
-                                <Images size={18} /> Gallery
-                            </Link>
+                         
                             <Link to="/academics" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <GraduationCap size={18} /> Academics
+                            </Link>
+                               <Link to="/gallery" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
+                                <Images size={18} /> Gallery
                             </Link>
                             <Link to="/about" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <Info size={18} /> About
@@ -120,19 +121,20 @@ const Navbar = () => {
                                 >
                                     HOME
                                 </Link>
-                                <Link 
-                                    to="/contact" 
-                                    onClick={() => setMenuOpen(false)}
-                                    className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
-                                >
-                                    GALLERY
-                                </Link>
+                              
                                    <Link 
-                                    to="/" 
+                                    to="/academics" 
                                     onClick={() => setMenuOpen(false)}
                                     className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
                                 >
                                     ACADAMICS
+                                </Link>
+                                  <Link 
+                                    to="/gallery" 
+                                    onClick={() => setMenuOpen(false)}
+                                    className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
+                                >
+                                    GALLERY
                                 </Link>
                                 <Link 
                                     to="/gallery" 
