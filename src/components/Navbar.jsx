@@ -56,15 +56,16 @@ const Navbar = () => {
                             <Link to="/gallery" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <Images size={18} /> Gallery
                             </Link>
+                            <Link to="/academics" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
+                                <GraduationCap size={18} /> Academics
+                            </Link>
                             <Link to="/about" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <Info size={18} /> About
                             </Link>
                             <Link to="/contact" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
                                 <Phone size={18} /> Contact
                             </Link>
-                            <Link to="/academics" className="flex items-center gap-2 font-medium text-primary hover:text-secondary transition text-base">
-                                <GraduationCap size={18} /> Academics
-                            </Link>
+                            
                         </div>
 
                         {/* Search Button */}
@@ -126,6 +127,13 @@ const Navbar = () => {
                                 >
                                     GALLERY
                                 </Link>
+                                   <Link 
+                                    to="/" 
+                                    onClick={() => setMenuOpen(false)}
+                                    className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
+                                >
+                                    ACADAMICS
+                                </Link>
                                 <Link 
                                     to="/gallery" 
                                     onClick={() => setMenuOpen(false)}
@@ -140,13 +148,7 @@ const Navbar = () => {
                                 >
                                     CONTACT
                                 </Link>
-                                <Link 
-                                    to="/" 
-                                    onClick={() => setMenuOpen(false)}
-                                    className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
-                                >
-                                    ACADAMICS
-                                </Link>
+                             
                             </div>
 
                             {/* Right side decorative vertical boundary line for desktop look */}
