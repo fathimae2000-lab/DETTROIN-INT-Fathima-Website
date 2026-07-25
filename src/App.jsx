@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/About";
 import Academics from "./pages/Academics";
 import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
     <Route path="/about" element={<AboutPage/>}/>
     <Route path="/academics" element={<Academics/>}/>
     <Route path="/gallery" element={<Gallery />}/>
+    <Route path="/contact" element={<Contact />}/>
 
    </Routes>
+   <Footer/>
    </>
   );
 }
