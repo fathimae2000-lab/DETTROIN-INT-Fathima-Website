@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #002663;
+  --color-secondary: #C40233;
+  --color-text: #525252;
+
+  /* Background */
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+
+  /* Border */
+  --color-border: #e5e7eb;
+
+  /* Hover */
+  --color-primary-hover: #001d4f;
+  --color-secondary-hover: #a3002a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+@utility clip-path-banner {
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
