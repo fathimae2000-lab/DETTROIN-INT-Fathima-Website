@@ -4,8 +4,6 @@ import { Compass, CheckCircle2, Sparkles } from "lucide-react";
 import international from "../assets/images/academics/internation.webp";
 import cbse from "../assets/images/academics/cbse.webp";
 import primary from "../assets/images/academics/primary.webp";
-import { image } from "framer-motion/client";
-
 
 const academicStages = [
     {
@@ -19,7 +17,7 @@ const academicStages = [
             "Nourish Lab & hands-on environmental projects",
             "Strong focus on peer collaboration and social-emotional growth"
         ],
-        image:primary
+        image: primary
     },
     {
         id: "cbse",
@@ -32,7 +30,7 @@ const academicStages = [
             "Process-focused learning prioritizing deep understanding over rote memorization",
             "Leadership development via student-led councils and symposia"
         ],
-        image:cbse
+        image: cbse
     },
     {
         id: "cambridge",
