@@ -38,7 +38,7 @@ const academicStages = [
         subtitle: "Cambridge IGCSE & Advanced",
         desc: "Offering world-class international standards starting from Class 8 foundation through IGCSE and AS/A Levels, focusing on inquiry and global perspectives.",
         highlights: [
-            "Vasant Valley School is a registered Cambridge International School offering the Cambridge curriculum for Classes 8–12. Class 8 serves as a foundation year, focusing on developing the skills and attributes essential for the Cambridge IGCSE programme in Classes 9 and 10, which then extend into the Cambridge Advanced programme in Class 11 (AS Level) and Class 12 A Level."
+            "Little Flower School is a registered Cambridge International School offering the Cambridge curriculum for Classes 8–12. Class 8 serves as a foundation year, focusing on developing the skills and attributes essential for the Cambridge IGCSE programme in Classes 9 and 10, which then extend into the Cambridge Advanced programme in Class 11 (AS Level) and Class 12 A Level."
         ],
         image: international
     }
@@ -46,7 +46,7 @@ const academicStages = [
 
 const signaturePrograms = [
     {
-        title: "Vasant Valley Futures Diploma",
+        title: "Little Flower School Futures Diploma",
         desc: "A rigorous, self-directed pathway for selected students in Grades 8–12 ready to go beyond standard curriculum silos."
     },
     {

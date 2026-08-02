@@ -69,7 +69,7 @@ const AboutPage = () => {
               >
                 <Sparkles size={16} />
               </motion.span>
-              About Vasant Valley
+              About Little Flower School
             </motion.span>
             
             <motion.h1
@@ -87,7 +87,7 @@ const AboutPage = () => {
               transition={{ delay: 0.4, duration: 0.7, ease: EASE }}
               className="text-text leading-relaxed text-sm sm:text-base lg:text-lg mb-8"
             >
-              Vasant Valley School was established in 1990 by Mr. Aroon Purie and Mrs. Rekha Purie as an initiative of the Education Today Trust.
+              Little Flower School was established in 1990 by Mr. Aroon Purie and Mrs. Rekha Purie as an initiative of the Education Today Trust.
 The school began its journey with around 200 students and 16 teachers in July 1990. It is a self-financing inclusive day school spread over eight acres of land in Vasant Kunj, New Delhi, India.
             </motion.p>
             
@@ -120,7 +120,7 @@ The school began its journey with around 200 students and 16 teachers in July 19
           >
             <motion.img 
               src={students} 
-              alt="Vasant Valley Campus Life" 
+              alt="Little Flower School Life" 
               initial={{ scale: 1.15 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.4, ease: EASE, delay: 0.2 }}

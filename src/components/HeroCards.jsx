@@ -28,11 +28,13 @@ const cardVariants = {
 };
 
 const HeroCards = () => {
+    const [activeIndex, setActiveIndex] = React.useState(null);
+
   const cardsData = [
     {
       title: "Excellence in Deed",
       image: excellence,
-      description: "The Schools motto sets the standard for Vasant Valley School. Individualized attention for each student, a learning framework, equity of all stakeholders and commitment to society are the pillars of the Schools philosophy. We believe that education is an enjoyable and interactive process.",
+      description: "The Schools motto sets the standard for Little Flower School. Individualized attention for each student, a learning framework, equity of all stakeholders and commitment to society are the pillars of the Schools philosophy. We believe that education is an enjoyable and interactive process.",
       badgeBg: "bg-secondary",
       overlayColor: "bg-secondary/95",
     },
@@ -52,11 +54,9 @@ const HeroCards = () => {
     },
   ];
 
-  return (
+ return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-0">
-        
-        {/* Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -64,57 +64,69 @@ const HeroCards = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
-          {cardsData.map((card, index) => (
-            <motion.div 
-              key={index} 
-              variants={cardVariants}
-              whileHover={{ y: -10, transition: { duration: 0.4, ease: EASE } }}
-              className="relative group overflow-hidden rounded-lg shadow-lg h-[440px] sm:h-[480px] bg-surface border border-border cursor-pointer"
-            >
-              {/* Card Background Image */}
-              <img 
-                src={card.image} 
-                alt={card.title} 
-                className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-              />
-
-              {/* Initial Gradient Overlay at the bottom for normal state banner readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
-
-              {/* Default State: Bottom Angled Title Banner */}
+          {cardsData.map((card, index) => {
+            const isActive = activeIndex === index;
+            return (
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: EASE, delay: index * 0.15 + 0.4 }}
-                className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex items-center justify-between pointer-events-none transition-all duration-300 group-hover:opacity-0"
+                key={index}
+                variants={cardVariants}
+                whileHover={{ y: -10, transition: { duration: 0.4, ease: EASE } }}
+                onClick={() =>
+                  setActiveIndex(isActive ? null : index)
+                }
+                className="relative group overflow-hidden rounded-lg shadow-lg h-[440px] sm:h-[480px] bg-surface border border-border cursor-pointer"
               >
-                <div className={`${card.badgeBg} text-white px-4 sm:px-6 py-2.5 sm:py-3 font-['Poppins'] font-bold text-lg sm:text-xl tracking-wider uppercase clip-path-banner shadow-md`}>
-                  {card.title}
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className={`absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out ${
+                    isActive ? "scale-110" : "group-hover:scale-110"
+                  }`}
+                />
+
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 ${
+                    isActive ? "opacity-0" : "group-hover:opacity-0"
+                  }`}
+                ></div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: EASE, delay: index * 0.15 + 0.4 }}
+                  className={`absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex items-center justify-between pointer-events-none transition-all duration-300 ${
+                    isActive ? "opacity-0" : "group-hover:opacity-0"
+                  }`}
+                >
+                  <div className={`${card.badgeBg} text-white px-4 sm:px-6 py-2.5 sm:py-3 font-['Poppins'] font-bold text-lg sm:text-xl tracking-wider uppercase clip-path-banner shadow-md`}>
+                    {card.title}
+                  </div>
+                </motion.div>
+
+                <div
+                  className={`absolute inset-0 ${card.overlayColor} flex flex-col items-center justify-center p-6 sm:p-8 text-center transition-all duration-500 ease-out transform ${
+                    isActive
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0"
+                  }`}
+                >
+                  <h3 className="text-white font-['Poppins'] font-bold text-2xl sm:text-3xl tracking-wide uppercase mb-4 sm:mb-6">
+                    {card.title}
+                  </h3>
+                  <p className="text-white/95 font-['Inter'] text-xs sm:text-sm lg:text-base leading-relaxed">
+                    {card.description}
+                  </p>
+                  <div className="w-12 h-1 bg-white/60 rounded-full mt-6"></div>
                 </div>
               </motion.div>
-
-              {/* Hover State: Full Color Overlay with Centered Title & Description */}
-              <div className={`absolute inset-0 ${card.overlayColor} flex flex-col items-center justify-center p-6 sm:p-8 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out transform translate-y-6 group-hover:translate-y-0`}>
-                <h3 className="text-white font-['Poppins'] font-bold text-2xl sm:text-3xl tracking-wide uppercase mb-4 sm:mb-6 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-100 ease-out">
-                  {card.title}
-                </h3>
-                <p className="text-white/95 font-['Inter'] text-xs sm:text-sm lg:text-base leading-relaxed opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500 delay-200 ease-out">
-                  {card.description}
-                </p>
-                <div className="w-12 h-1 bg-white/60 rounded-full mt-6 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-300 ease-out origin-center"></div>
-              </div>
-
-              {/* Corner accent that pops in on hover */}
-              <div className="absolute top-5 right-5 w-2.5 h-2.5 rounded-full bg-white/0 group-hover:bg-white/70 scale-0 group-hover:scale-100 transition-all duration-400 delay-150"></div>
-
-            </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
-
       </div>
     </section>
   );
 };
+
 
 export default HeroCards;

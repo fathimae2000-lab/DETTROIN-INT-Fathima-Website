@@ -17,7 +17,7 @@ const slides = [
   {
     image: hero1,
     title: "Inspiring Excellence",
-    subtitle: "Welcome to Vasant Valley School",
+    subtitle: "Welcome to Little Flower School",
     quote:
       "Education is the foundation upon which we build the future of every child.",
   },

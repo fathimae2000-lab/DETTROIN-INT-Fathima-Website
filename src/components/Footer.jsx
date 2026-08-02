@@ -64,7 +64,7 @@ const Footer = () => {
               className="flex flex-col items-start"
             >
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-wide font-['Poppins']">
-                Vasant Valley
+                Little Flower School
               </h2>
 
               <motion.div
@@ -112,7 +112,7 @@ const Footer = () => {
                 <motion.div variants={listItem} className="flex items-start gap-3.5">
                   <MapPin className="text-secondary mt-1 shrink-0" size={20} />
                   <p className="leading-snug">
-                    Vasant Valley School<br />
+                    Little Flower School<br />
                     Sector C, ab street<br />
                     Kerala, India
                   </p>
@@ -234,7 +234,7 @@ const Footer = () => {
           >
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
               <p className="text-gray-300 text-xs sm:text-sm">
-                © 2026 Vasant Valley School. All Rights Reserved.
+                © 2026 Little Flower School. All Rights Reserved.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-300 text-xs sm:text-sm">

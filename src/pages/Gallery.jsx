@@ -17,7 +17,7 @@ import program from "../assets/images/gallery/program.webp";
 import skating from "../assets/images/gallery/skating.webp";
 import sports from "../assets/images/gallery/sports.webp";
 
-// Sample gallery data tailored for Vasant Valley School
+// Sample gallery data tailored for Little Flower School
 const galleryCategories = ["All", "Campus", "Events", "Sports", "Academics"];
 
 
@@ -185,7 +185,7 @@ const Gallery = () => {
             transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-poppins font-bold text-white mb-4 max-w-2xl leading-tight"
           >
-            Life at Vasant Valley, in Pictures.
+            Life at Little Flower School, in Pictures.
           </motion.h1>
 
           <motion.p

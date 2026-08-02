@@ -34,7 +34,7 @@ const Contact = () => {
                     className="bg-white p-6 sm:p-8 lg:p-12 shadow-md border border-border flex flex-col justify-between"
                 >
                     <div>
-                        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6">Vasant Valley School</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6">Little Flower School</h2>
                         
                         <div className="space-y-6">
                             {/* Address */}
@@ -44,7 +44,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-primary text-base sm:text-lg">Location</h3>
-                                    <p className="text-text mt-1 text-sm sm:text-base">Sector C, Vasant Kunj, New Delhi - 110070, India</p>
+                                    <p className="text-text mt-1 text-sm sm:text-base">School Road, Near Civil Station</p>
                                     <a 
                                         href="https://maps.google.com" 
                                         target="_blank" 
@@ -63,7 +63,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-primary text-base sm:text-lg">Phone</h3>
-                                    <p className="text-text mt-1 text-sm sm:text-base">+91 11 41767940</p>
+                                    <p className="text-text mt-1 text-sm sm:text-base">+91 17654370</p>
                                 </div>
                             </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-primary text-base sm:text-lg">Email</h3>
-                                    <p className="text-text mt-1 text-sm sm:text-base break-all">info@vasantvalley.edu.in</p>
+                                    <p className="text-text mt-1 text-sm sm:text-base break-all">info@Little Flower School.edu.in</p>
                                 </div>
                             </div>
 

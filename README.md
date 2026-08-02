@@ -1,22 +1,3 @@
-# DETTROIN Internship Assignment – School Website Redesign
-
-## Full Name
-Fathima E
-
-## Intern ID
-<Your Intern ID>
-
-## Email
-fathimae2000@gmail.com
-
-## GitHub Username
-fathimae2000-lab
-
-## Selected Website
-https://www.vasantvalley.org/
-
-## Live Demo
-https://dettroin-int-fathima.vercel.app/
 
 ## Technologies Used
 

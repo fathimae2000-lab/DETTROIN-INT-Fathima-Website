@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Search, Images, Info, Phone, Home, Edit3, Heart, GraduationCap } from "lucide-react";
-import logo from "../assets/images/logo/logo-vasant-valley.svg";
+import logo from "../assets/images/logo/logo.jpg";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
                     }`}>
                         <img
                             src={logo}
-                            alt="Vasant Valley School"
+                            alt="Little Flower School"
                             className={`w-auto object-contain transition-all duration-300 ${
                                 isScrolled ? "h-10 sm:h-14" : "h-14 sm:h-20"
                             }`}
@@ -115,7 +115,7 @@ const Navbar = () => {
                         <div className="max-w-[1200px] w-full mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center my-auto">
                             <div className="flex flex-col space-y-4 lg:space-y-6 text-left">
                                 <Link 
-                                    to="/about" 
+                                    to="/" 
                                     onClick={() => setMenuOpen(false)}
                                     className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
                                 >
@@ -137,14 +137,14 @@ const Navbar = () => {
                                     GALLERY
                                 </Link>
                                 <Link 
-                                    to="/gallery" 
+                                    to="/about" 
                                     onClick={() => setMenuOpen(false)}
                                     className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
                                 >
                                     ABOUT
                                 </Link>
                                 <Link 
-                                    to="/" 
+                                    to="/contact" 
                                     onClick={() => setMenuOpen(false)}
                                     className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white hover:text-secondary transition tracking-wide font-['Poppins']"
                                 >
@@ -156,7 +156,7 @@ const Navbar = () => {
                             {/* Right side decorative vertical boundary line for desktop look */}
                             <div className="hidden lg:block border-l-2 border-white/20 pl-12 py-10">
                                 <p className="text-white/80 text-lg leading-relaxed mb-6 font-['Inter']">
-                                    Welcome to Vasant Valley School. Explore our multidimensional academic framework, student archives, and community portals.
+                                    Welcome to Little Flower School. Explore our multidimensional academic framework, student archives, and community portals.
                                 </p>
                                 <Link 
                                     to="/contact" 
